@@ -102,7 +102,7 @@ async def on_app_command_error(interaction: discord.Interaction, error: discord.
 
 @client.event
 async def on_ready():
-    # TODO: Sync in admin command, to not hit rate limits.
+    # TODO: Sync in admin command, not to hit rate limits.
     # This might be overkill for most users, and it would require to set a guild or user id, where sync is allowed.
     await tree.sync()
     logger.debug("Command tree synced")
